@@ -13,11 +13,11 @@
         }
         form{
             width: 300px;
-            padding: 20px;
+            /* padding: 20px;
             border: 1px solid #ccc;
             border-radius: 10px;
             background-color: #f9f9f9;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
             
 
         }
@@ -26,14 +26,12 @@
             margin: 6px;
             width: 75%;
         }
-        /* div{
-            margin: 5px 0 0;
-            font-size: 13px;
-        } */
+        
         .error{
             color: red;
             font-size: 12px;
          margin-bottom: 10px;
+         height: 14px;
 
         }
         button{
@@ -69,7 +67,7 @@
         <input type="password" id="password">
         <div id="passwordError" class="error"></div>
 
-        <button id="submitbtn">Submit</button>
+        <button id="submitbtn" type="button" disabled>Submit</button>
     </form>
 </center>
 
@@ -93,6 +91,9 @@
         alert("Registration successful!");
         form.reset();
         submitbtn.disabled = true;
+        nameError.textContent = "";
+      emailError.textContent = "";
+      passwordError.textContent = "";
       }
     });
 
